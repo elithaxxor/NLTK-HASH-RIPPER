@@ -1,3 +1,4 @@
+from ..utils.utils import TARGET_DIRECTORIES_I, TARGET_DIRECTORIES_II, WINDOWS_CREDENTIAL_LOCATIONS, HASH_KEYWORDS, HASH_REGEX
 import os
 import magic
 import nltk

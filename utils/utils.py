@@ -76,6 +76,16 @@ def TARGET_DIRECTORIES_II():
     ]
 
 def HASH_KEYWORDS():
+    HASH_KEYWORDS = [
+        "hash",
+        "ntlm",
+        "lmhash",
+        "mscach2",
+        "sha1",
+        "sha256",
+        "md5"
+    ]
+
     return [
         "hash", "ntlm", "lmhash", "mscach2", "sha1", "sha256", "md5"
     ]

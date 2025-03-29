@@ -4,8 +4,8 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-# Import from utils.py
-from utils.utils import TARGET_DIRECTORIES, HASH_KEYWORDS, HASH_REGEX
+# Import from utils
+from ..utils.utils import TARGET_DIRECTORIES_I, TARGET_DIRECTORIES_II, WINDOWS_CREDENTIAL_LOCATIONS, HASH_KEYWORDS, HASH_REGEX
 
 # Download required NLTK resources (run once)
 nltk.download('punkt', quiet=True)
@@ -67,7 +67,7 @@ def main():
 
     # Step 1: Scan target directories
     print("Scanning target directories...")
-    found_files = scan_directories(TARGET_DIRECTORIES())
+    found_files = scan_directories(TARGET_DIRECTORIES_I())
 
     print("\nFiles containing potential hash-related content:")
     for file in found_files:
