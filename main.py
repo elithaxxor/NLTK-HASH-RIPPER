@@ -1,6 +1,6 @@
 # main.py
 from NLTK_DUMPER.utils.utils import scan_directories, analyze_text_with_nltk
-from NLTK_DUMPER.utils.utils import TARGET_DIRECTORIES
+from NLTK_DUMPER.utils.utils import TARGET_DIRECTORIES_I
 from NLTK_DUMPER.naive_bayes_classifyer.naive_bayes_classifier import train_classifier, classify_text
 
 def main():
@@ -11,7 +11,7 @@ def main():
 
     # Step 1: Scan target directories
     print("Scanning target directories...")
-    found_files = scan_directories(TARGET_DIRECTORIES)
+    found_files = scan_directories(TARGET_DIRECTORIES_I)
 
     print("\nFiles containing potential hash-related content:")
     for file in found_files:
