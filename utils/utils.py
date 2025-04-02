@@ -1,6 +1,24 @@
 # Basically, for training data, I may refactor this in C and the access parameters in C for speed.
 import os, sys, time, re, magic, nltk, glob
 
+
+def VULN_SIGNATURES():
+       vuln_signatures = {
+        "weak_krbtgt_hash": {
+            "pattern": r"krbtgt.*default",
+            "severity": "Critical",
+            "cve": "CVE-2020-1472", # Example
+            "description": "Default krbtgt password may enable Zerologon"
+        },
+        "legacy_cipher": {
+            "pattern": r"SYSTEM\\CurrentControlSet\\Control\\SecurityProviders.*RC4",
+            "severity": "High",
+            "cve": "CVE-2013-3406", # Example
+            "description": "Legacy cipher suites enabled"
+        }
+    }
+    return vuln_signatures
+
 def TARGET_DIRECTORIES_II():
     return [
         r"C:\Windows\System32\config",  # Location of SAM and SYSTEM files
