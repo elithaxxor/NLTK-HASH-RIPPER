@@ -1,5 +1,4 @@
-import os, sys, time, re, magic, nltk, glob
-
+# Basically, for training data, I may refactor this in C and the access parameters in C for speed.
 import os, sys, time, re, magic, nltk, glob
 
 def TARGET_DIRECTORIES_II():
